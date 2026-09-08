@@ -88,6 +88,10 @@ body{
 </style>
 </head>
 
+<body>
+
+<?php include "components/header.php"; ?>
+
 <div class="container py-5">
     <div class="main-card p-4 p-md-5">
         <h1 class="text-center title mb-5">
@@ -117,11 +121,6 @@ body{
         <h3 class="mb-4">
             Your Notes
         </h3>
-
-                <h3 class="mb-4">
-            Your Notes
-        </h3>
-
 
         <div class="row g-4">
 
@@ -172,6 +171,8 @@ body{
         </div>
     </div>
 </div>
+
+<?php include "components/footer.php"; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

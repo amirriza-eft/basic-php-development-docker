@@ -1,4 +1,42 @@
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
+}
+
+.site-header {
+  background: rgba(11, 27, 54, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+.login-btn {
+  background: #2563eb;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.site-footer {
+  background: #071426;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 25px 0;
+}
+
+.github-link {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #93c5fd;
 }
