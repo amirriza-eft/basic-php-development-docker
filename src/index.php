@@ -118,6 +118,10 @@ body{
             Your Notes
         </h3>
 
+                <h3 class="mb-4">
+            Your Notes
+        </h3>
+
 
         <div class="row g-4">
 
