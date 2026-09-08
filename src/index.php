@@ -19,9 +19,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             VALUES(:title, :content)
         ";
 
-        $stmt = $pdo->prepare($sql);
+        $query = $pdo->prepare($sql);
 
-        $stmt->execute([
+        $query->execute([
             "title" => $title,
             "content" => $content
         ]);
