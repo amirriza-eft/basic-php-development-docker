@@ -122,7 +122,6 @@ body{
             Your Notes
         </h3>
 
-        <div class="row g-4">
 
             <?php if (empty($_SESSION['notes'])): ?>
                 <div class="empty">
