@@ -102,11 +102,21 @@ body{
 
             <input type="hidden" name="action" value="add">
 
+            <input
+                type="text"
+                name="note_title"
+                class="form-control note-input mb-3"
+                placeholder="Note title..."
+                maxlength="100"
+                required
+            >
+
             <textarea
                 name="note"
                 class="form-control note-input mb-3"
                 rows="5"
                 placeholder="write your note here..."
+                required
             ></textarea>
 
             <button class="btn btn-primary btn-add px-5 py-2 center d-block mx-auto">
@@ -166,7 +176,9 @@ body{
                         </div>
                     </div>
                 <?php endforeach; ?>
+
             <?php endif; ?>
+
         </div>
     </div>
 </div>
