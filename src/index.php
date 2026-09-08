@@ -1,5 +1,35 @@
 <?php
 
+session_start();
+
+require __DIR__ . "/config/database.php";
+
+
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+
+    $action = $_POST['action'] ?? "";
+
+    if($action === "add"){
+
+        $title = $_POST['note_title'];
+        $content = $_POST['note'];
+
+        $sql = "
+            INSERT INTO notes(title, content)
+            VALUES(:title, :content)
+        ";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->execute([
+            "title" => $title,
+            "content" => $content
+        ]);
+    }
+
+    header("Location: index.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -124,14 +154,11 @@ body{
             </button>
         </form>
 
-
         <hr class="border-secondary my-5">
-
 
         <h3 class="mb-4">
             Your Notes
         </h3>
-
 
             <?php if (empty($_SESSION['notes'])): ?>
                 <div class="empty">
